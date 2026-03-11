@@ -12,4 +12,6 @@ I have been trying to implement some of the work that we have been doing in our 
 
 The testing that I plan on doing will be testing that each function works, like the verfication and the destination arrival functions. I think that I should also implement exceptions and error handling. We did it recently in a lab and I believe that it would be good for the project, as it shows more innitiative and prudence.
 
+<h2>11/03/2026</h2>
 
+I am working on the testing functions. There will be one general test called that will run all other tests. To make the test grids, I didn't want to go through the process of setting up a new grid for every test so I made a default constructor. It works pretty well so I'm happy to use it. I may reformat the main grid to work off of something like this. I'd say I can get testing done today, leaving just the printing of the final grid and the path.
