@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -214,16 +213,10 @@
       <div class="project-tag">ATU &nbsp;·&nbsp; C++ Project &nbsp;·&nbsp; 2026</div>
       <div class="project-title"># C-Project</div>
       <p class="project-sub">
-        Development log and report for the C++ A* pathfinding project.
+        This will serve as a development log and report for the C++ A* pathfinding project.
         The goal is to implement an A* algorithm to find the shortest route through a randomly generated maze.
         The Geeks4Geeks article on A* algorithms was a useful reference for the underlying theory.
       </p>
-      <div class="tag-row">
-        <span class="tag">C++</span>
-        <span class="tag">A* algorithm</span>
-        <span class="tag">pathfinding</span>
-        <span class="tag info">Geeks4Geeks reference</span>
-      </div>
     </div>
 
     <div class="entries">
@@ -234,12 +227,6 @@
         <div class="entry-body">
           <p>Working on applying concepts from the Matrices lab — specifically overloaded operators. The plan is to overload the <code>=</code> operator to duplicate the grid, so a separate copy can be printed with the path mapped out using directional characters <code>\ - / |</code>.</p>
           <p>Met with Michelle today. She recommended focusing on testing for the algorithm, and keeping the overloaded operator in the codebase even if unused — it demonstrates initiative and understanding of the course material.</p>
-          <div class="callout blue">Plan: implement exceptions and error handling alongside unit tests for each core function (validation, destination arrival, etc.).</div>
-          <div class="tag-row">
-            <span class="tag">operator overloading</span>
-            <span class="tag">testing</span>
-            <span class="tag info">Michelle meeting</span>
-          </div>
         </div>
       </div>
 
@@ -247,14 +234,12 @@
       <div class="entry">
         <div class="entry-date">&gt; 11/03/2026</div>
         <div class="entry-body">
-          <p>Working on the test functions. A single <code>runAllTests()</code> will orchestrate everything. To avoid setting up a new grid for every test, a default constructor was added — works well enough that the main grid may be refactored to use it too.</p>
-          <p>Started on the final grid print. Abandoned the second-grid approach; keeping the <code>=</code> operator for posterity to show the thought process. Now printing based on character type and cell details.</p>
+          <p>Working on the test functions. A single <code>runAllTests()</code> will run the tests. I didn't want to create a new grid for every test, so I made a default constructor. I just pass two values for an x and y axis. Making the default constructor shows that I have learned from the module and can implement my learning into my project.</p>
+          <p>Started on the final grid print. I've abandoned the overloaded <code>=</code> operator. It didn't end up working, as I would have had to convert the grid to const char. I instead chose to print based off of the value, # for 0, * for 1. Then I replace the values of the path taken, with characters coresponding with the direction of the path.</p>
 
-          <div class="callout orange">
-            Bug: "Expression: vector subscript out of range" — validation appeared to be checking coordinates outside the grid. Diagnosed with AI assistance; described as similar in nature to the CrowdStrike incident (a logic error in a boundary check).
-          </div>
-
-          <p>Turned out the root cause was simpler — <code>createGrid()</code> had been moved but never called at the new location. The grid was never being initialised. Validation logic was correct all along.</p>
+          <p>I'm having an error with, "Expression: vector subscript out of range". I believe there is an error with validation. I'm going to work with AI to try and diagnose the issue.</p>
+          
+          <p>Turns out the issue was alot simpler than I realised. I moved the grid initialisation to within the A* algorithm. I didn't move the grid creation into it though. That was the only real issue. I did readdress the validation to make sure it was within bounds</p>
 
           <p>I have the main file initialising the destination and starting point.</p>
 
@@ -263,35 +248,25 @@
             <div class="img-caption">// main.cpp — destination + start initialisation</div>
           </div>
 
-          <p>Changed how the grid is generated. Previously using <code>srand()</code> for random generation. After talking with Nathan, switched to the <code>&lt;random&gt;</code> library.</p>
+          <p>Changed how the grid is generated. Previously I was using <code>srand()</code> to create the grid. It made very inconsistent grids, that were very hard to navigate. </p>
 
           <div class="img-block">
             <img src="Screenshot 2026-03-17 153436.png" alt="uniform_int_distribution code" width="468" height="205"/>
             <div class="img-caption">// createGrid() — std::uniform_int_distribution&lt;int&gt;(0,1)</div>
           </div>
 
-          <div class="callout green">
-            Now using <code>std::uniform_int_distribution</code> seeded with <code>std::random_device</code>, producing a proper uniform distribution of 1s and 0s each run.
-          </div>
+          <p>After talking with Nathan, I switched to the <code>&lt;random&gt;</code> library, as it has uniform distribution. This gives a more even distribution of 1s and 0s.</p>
 
           <div class="img-block">
             <img src="Screenshot 2026-03-17 155448.png" alt="Finished grid with path overlaid" width="359" height="402"/>
             <div class="img-caption">// finished grid — path overlaid with directional characters</div>
           </div>
 
-          <p>Colour output added to the console grid using <code>SetConsoleTextAttribute</code>. Directional path characters (<code>^ v &lt; &gt; / \</code>) now render on the finished grid. The result is clean and easy to read.</p>
+          <p>I added colour to the output. This makes the output alot cleaner, and easier to read.</p>
 
           <div class="img-block">
             <img src="Screenshot 2026-03-17 155347.png" alt="Colour-coded console output" width="377" height="445"/>
             <div class="img-caption">// console output — colour-coded walls, path, and open cells</div>
-          </div>
-
-          <div class="tag-row">
-            <span class="tag">testing</span>
-            <span class="tag warn">bug fixed</span>
-            <span class="tag">&lt;random&gt; library</span>
-            <span class="tag">colour output</span>
-            <span class="tag info">Nathan collab</span>
           </div>
         </div>
       </div>
