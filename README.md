@@ -22,17 +22,17 @@ Nevermind. I was wrong. I had moved where the grid was being made, but I didn't 
 
 I have the main file initialising the destination and starting point.
 
-<img width="185" height="229" alt="image" src="https://github.com/user-attachments/assets/1743b3a0-9275-48a7-9caf-1b5bf8324d45" />
+<img width="185" height="229" alt="image" src="Screenshot 2026-03-17 155808.png" />
 
 I changed how I generated the grid. I was talking to Nathan and he showed me how he generated his grid. As I was previously using the srand to make a completely random.
 
-<img width="468" height="205" alt="image" src="https://github.com/user-attachments/assets/bd5a60b5-388a-4b10-8474-32911b8e7cdb" />
+<img width="468" height="205" alt="image" src="Screenshot 2026-03-17 153436.png" />
 
 Now I am using the random library, I get a uniform distribution of 1s and 0s.
 
-<img width="359" height="402" alt="image" src="https://github.com/user-attachments/assets/05ea1e62-de59-427c-8b04-2d42400d4246" />
+<img width="359" height="402" alt="image" src="Screenshot 2026-03-17 155448.png" />
 
 I have also changed the colour of the grid being printed, as it gives a better aesthetic, and is easier to read. This as well as the direction of the path being printed, makes the finished grid look quite good.
 
-<img width="377" height="445" alt="image" src="https://github.com/user-attachments/assets/03cc9ae7-7fb3-4e68-ab38-d7ea1f2218b2" />
+<img width="377" height="445" alt="image" src="Screenshot 2026-03-17 155347.png" />
 
