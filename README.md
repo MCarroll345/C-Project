@@ -246,20 +246,6 @@
             <div class="img-caption">// main.cpp — destination + start initialisation</div>
           </div>
 
-          <p>The way I was generating my grid, was by using <code>srand()</code> and modulo 2. This would give me either a 1 or a 0, which would be then used to fill the grid. This works, but it is "too random". It generates a grid that is very often impossible to navigate. This is why I chose to change the way the grid was generated.</p>
-
-          <div class="img-block">
-            <img src="Screenshot 2026-03-17 153436.png" alt="uniform_int_distribution code" width="468" height="205"/>
-            <div class="img-caption">// createGrid() — std::uniform_int_distribution&lt;int&gt;(0,1)</div>
-          </div>
-
-          <p>I talked with Nathan about the grid generation, and he pointed me in the way of the <code>random</code> library. This library gave me access to <code>uniform_int_distribution</code>. This, in combination with <code>default_random_engine</code>, allows me to create a grid with a better distribution of 1s and 0s. This makes the grid far more solvable than the <code>srand</code> grid.</p>
-
-          <div class="img-block">
-            <img src="Screenshot 2026-03-17 153645.png" alt="Finished grid with path overlaid" width="359" height="402"/>
-            <div class="img-caption">// finished grid — path overlaid with directional characters</div>
-          </div>
-
           <div class="img-block">
             <img src="Screenshot 2026-03-17 155448.png" alt="Finished grid with path overlaid" width="359" height="402"/>
             <div class="img-caption">// finished grid — path overlaid with directional characters</div>
@@ -273,7 +259,6 @@
           </div>
         </div>
       </div>
-
       
       <div class="entry">
         <div class="entry-date">&gt; 18/03/2026</div>
@@ -287,7 +272,23 @@
       <div class="entry">
         <div class="entry-date">Report</div>
         <div class="entry-body">
+          
           <p></p>
+
+          <p>The way I was generating my grid, was by using <code>srand()</code> and modulo 2. This would give me either a 1 or a 0, which would be then used to fill the grid. This works, but it is "too random". It generates a grid that is very often impossible to navigate. This is why I chose to change the way the grid was generated.</p>
+
+          <div class="img-block">
+            <img src="Screenshot 2026-03-17 153436.png" alt="uniform_int_distribution code" width="468" height="205"/>
+            <div class="img-caption">// createGrid() — std::uniform_int_distribution&lt;int&gt;(0,1)</div>
+          </div>
+
+          <p>I talked with Nathan about the grid generation, and he pointed me in the way of the <code>random</code> library. This library gave me access to <code>uniform_int_distribution</code>. This, in combination with <code>default_random_engine</code>, allows me to create a grid with a better distribution of 1s and 0s. This makes the grid far more solvable than the <code>srand</code> grid.</p>
+
+          <div class="img-block">
+            <img src="Screenshot 2026-03-17 153645.png" alt="Finished grid with path overlaid" width="359" height="402"/>
+            <div class="img-caption">// finished grid — path overlaid with directional characters</div>
+          </div>
+          
           <p>In relation to issues that I currently have, and things that could be to make the project, there are a couple things. Within the A* function, I could've made a function to check the surrounding cells, instead of having it check each cell individually. This would reduce the stack size of the function, helping it run faster. I would also have liked to done more comprehensive unit tests. Testing the A* algorithm more, testing the calculations would have given me a smaller margin of error.</p>
           <p>As far as AI usage goes, I used it very minimally. I chose to not use it for writing the A* algorithm, as the GeeksforGeeks example was sufficient. I also wanted to show my abilities as a developer and show the knowledge I have gained throughout the module. I made the Grid class, all of the tests and the A* without the use of AI. I did however use it for debugging purposes and for printing the final grid. The printing of the final grid with the cell details was complicated, so I employed the use of AI for it. I had to debug it's work as it would write over itself and the characters for the pathing were inverted. I did also use AI to create the HTML and CSS for this GitHub page, as HTML is one of my least favourite things to do.</p>
         </div>
