@@ -253,11 +253,6 @@
             <div class="img-caption">// main.cpp — destination + start initialisation</div>
           </div>
 
-          <div class="img-block">
-            <img src="Screenshot 2026-03-17 155448.png" alt="Finished grid with path overlaid" width="359" height="402"/>
-            <div class="img-caption">// finished grid — path overlaid with directional characters</div>
-          </div>
-
           <p>I added colour to the output. This makes the output alot cleaner, and easier to read.</p>
 
           <div class="img-block">
@@ -293,7 +288,10 @@
 
           <div class="img-block">
             <img src="Screenshot 2026-03-17 153645.png" alt="Finished grid with path overlaid" width="359" height="402"/>
-            <div class="img-caption">// finished grid — path overlaid with directional characters</div>
+          </div>
+
+          <div class="img-block">
+            <img src="Screenshot 2026-03-17 155448.png" alt="Finished grid with path overlaid" width="359" height="402"/>
           </div>
           
           <p>In relation to issues that I currently have, and things that could be to make the project, there are a couple things. Within the A* function, I could've made a function to check the surrounding cells, instead of having it check each cell individually. This would reduce the stack size of the function, helping it run faster. I would also have liked to done more comprehensive unit tests. Testing the A* algorithm more, testing the calculations would have given me a smaller margin of error.</p>
