@@ -215,11 +215,18 @@
       <p class="project-sub">
         This will serve as a development log and report for the C++ A* pathfinding project.
         The goal is to implement an A* algorithm to find the shortest route through a randomly generated maze.
-        The Geeks4Geeks article on A* algorithms was a useful reference for the underlying theory.
       </p>
     </div>
 
     <div class="entries">
+
+ 	    <!-- ── Entry 0 ── -->
+      <div class="entry">
+        <div class="entry-date">&gt; 25/02/2026</div>
+        <div class="entry-body">
+          <p>I used GeeksforGeeks to get a basis for the A* algorithm. I'm going to split the grid elements into it's own file so that the file layout is better.</p>
+        </div>
+      </div>
 
       <!-- ── Entry 1 ── -->
       <div class="entry">
