@@ -246,14 +246,14 @@
             <div class="img-caption">// main.cpp — destination + start initialisation</div>
           </div>
 
-          <p>Changed how the grid is generated. Previously I was using <code>srand()</code> to create the grid. It made very inconsistent grids, that were very hard to navigate. </p>
+          <p>The way I was generating my grid, was by using <code>srand()</code> and modulo 2. This would give me either a 1 or a 0, which would be then used to fill the grid. This works, but it is "too random". It generates a grid that is very often impossible to navigate. </p>
 
           <div class="img-block">
             <img src="Screenshot 2026-03-17 153436.png" alt="uniform_int_distribution code" width="468" height="205"/>
             <div class="img-caption">// createGrid() — std::uniform_int_distribution&lt;int&gt;(0,1)</div>
           </div>
 
-          <p>After talking with Nathan, I switched to the <code>&lt;random&gt;</code> library, as it has uniform distribution. This gives a more even distribution of 1s and 0s.</p>
+          <p></p>
 
           <div class="img-block">
             <img src="Screenshot 2026-03-17 155448.png" alt="Finished grid with path overlaid" width="359" height="402"/>
