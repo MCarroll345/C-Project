@@ -246,14 +246,19 @@
             <div class="img-caption">// main.cpp — destination + start initialisation</div>
           </div>
 
-          <p>The way I was generating my grid, was by using <code>srand()</code> and modulo 2. This would give me either a 1 or a 0, which would be then used to fill the grid. This works, but it is "too random". It generates a grid that is very often impossible to navigate. </p>
+          <p>The way I was generating my grid, was by using <code>srand()</code> and modulo 2. This would give me either a 1 or a 0, which would be then used to fill the grid. This works, but it is "too random". It generates a grid that is very often impossible to navigate. This is why I chose to change the way the grid was generated.</p>
 
           <div class="img-block">
             <img src="Screenshot 2026-03-17 153436.png" alt="uniform_int_distribution code" width="468" height="205"/>
             <div class="img-caption">// createGrid() — std::uniform_int_distribution&lt;int&gt;(0,1)</div>
           </div>
 
-          <p></p>
+          <p>I talked with Nathan about the grid generation, and he pointed me in the way of the <code>random</code> library. This library gave me access to <code>uniform_int_distribution</code>. This, in combination with <code>default_random_engine</code>, allows me to create a grid with a better distribution of 1s and 0s. This makes the grid far more solvable than the <code>srand</code> grid.</p>
+
+          <div class="img-block">
+            <img src="Screenshot 2026-03-17 153645.png" alt="Finished grid with path overlaid" width="359" height="402"/>
+            <div class="img-caption">// finished grid — path overlaid with directional characters</div>
+          </div>
 
           <div class="img-block">
             <img src="Screenshot 2026-03-17 155448.png" alt="Finished grid with path overlaid" width="359" height="402"/>
