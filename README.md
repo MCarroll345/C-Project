@@ -252,13 +252,6 @@
             <img src="Screenshot 2026-03-17 155808.png" alt="Main file initialising destination and starting point" width="185" height="229"/>
             <div class="img-caption">// main.cpp — destination + start initialisation</div>
           </div>
-
-          <p>I added colour to the output. This makes the output alot cleaner, and easier to read.</p>
-
-          <div class="img-block">
-            <img src="Screenshot 2026-03-17 155347.png" alt="Colour-coded console output" width="377" height="445"/>
-            <div class="img-caption">// console output — colour-coded walls, path, and open cells</div>
-          </div>
         </div>
       </div>
       
@@ -275,7 +268,7 @@
         <div class="entry-date">Report</div>
         <div class="entry-body">
           
-          <p></p>
+          <p>The method of the A* algorithm uses to find the shortest path is by assigning values to the surrounding cells, by distance of cell to the goal. There are multiple calculations going into this. First, it has to validate which cells are real and unblocked. Then it calculates the distance, using the pythagorean theorem. It then chooses the cell with the highest value, and moves there. From there, it repeats the process until it reaches the destination cell or exhausts all options.</p>
 
           <p>The way I was generating my grid, was by using <code>srand()</code> and modulo 2. This would give me either a 1 or a 0, which would be then used to fill the grid. This works, but it is "too random". It generates a grid that is very often impossible to navigate. This is why I chose to change the way the grid was generated.</p>
 
@@ -300,6 +293,13 @@
         <div class="img-block">
             <img src="Print.png" alt="Function replacing cells with characters" width="377" height="445"/>
             <div class="img-caption">// Function replacing cells with characters</div>
+         </div>
+
+         <p>This is the final product, a colour coded grid with characters correlating with the direction of the path taken.</p>
+         
+         <div class="img-block">
+            <img src="Screenshot 2026-03-17 155347.png" alt="Colour-coded console output" width="377" height="445"/>
+            <div class="img-caption">// console output — colour-coded walls, path, and open cells</div>
           </div>
       </div>
       <div class="entry">
