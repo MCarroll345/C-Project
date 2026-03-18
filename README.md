@@ -286,6 +286,10 @@
           <p>In relation to issues that I currently have, and things that could be to make the project, there are a couple things. Within the A* function, I could've made a function to check the surrounding cells, instead of having it check each cell individually. This would reduce the stack size of the function, helping it run faster. I would also have liked to done more comprehensive unit tests. Testing the A* algorithm more, testing the calculations would have given me a smaller margin of error.</p>
           <p>As far as AI usage goes, I used it very minimally. I chose to not use it for writing the A* algorithm, as the GeeksforGeeks example was sufficient. I also wanted to show my abilities as a developer and show the knowledge I have gained throughout the module. I made the Grid class, all of the tests and the A* without the use of AI. I did however use it for debugging purposes and for printing the final grid. The printing of the final grid with the cell details was complicated, so I employed the use of AI for it. I had to debug it's work as it would write over itself and the characters for the pathing were inverted. I did also use AI to create the HTML and CSS for this GitHub page, as HTML is one of my least favourite things to do.</p>
         </div>
+        <div class="img-block">
+            <img src="Print.png" alt="Function replacing cells with characters" width="377" height="445"/>
+            <div class="img-caption">// Function replacing cells with characters</div>
+          </div>
       </div>
       <div class="entry">
         <div class="entry-date">References</div>
