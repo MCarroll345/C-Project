@@ -286,6 +286,13 @@
           <p>As far as AI usage goes, I used it very minimally. I chose to not use it for writing the A* algorithm, as the GeeksforGeeks example was sufficient. I also wanted to show my abilities as a developer and show the knowledge I have gained throughout the module. I made the Grid class, all of the tests and the A* without the use of AI. I did however use it for debugging purposes and for printing the final grid. The printing of the final grid with the cell details was complicated, so I employed the use of AI for it. I had to debug it's work as it would write over itself and the characters for the pathing were inverted. I did also use AI to create the HTML and CSS for this GitHub page, as HTML is one of my least favourite things to do.</p>
         </div>
       </div>
+      <div class="entry">
+        <div class="entry-date">References</div>
+        <div class="entry-body">
+          <p><a href="https://www.geeksforgeeks.org/dsa/a-search-algorithm/">A* Algorith, GeeksforGeeks</a></p>
+          <p>As far as AI usage goes, I used it very minimally. I chose to not use it for writing the A* algorithm, as the GeeksforGeeks example was sufficient. I also wanted to show my abilities as a developer and show the knowledge I have gained throughout the module. I made the Grid class, all of the tests and the A* without the use of AI. I did however use it for debugging purposes and for printing the final grid. The printing of the final grid with the cell details was complicated, so I employed the use of AI for it. I had to debug it's work as it would write over itself and the characters for the pathing were inverted. I did also use AI to create the HTML and CSS for this GitHub page, as HTML is one of my least favourite things to do.</p>
+        </div>
+      </div>
     </div><!-- /entries -->
 
     <div class="author-row">
