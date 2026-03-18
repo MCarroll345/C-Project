@@ -204,14 +204,14 @@
     <div class="dot r"></div>
     <div class="dot y"></div>
     <div class="dot g"></div>
-    <div class="terminal-title">C-Project / devlog.html — Mark Carroll</div>
+    <div class="terminal-title">C++-Project / devlog.html — Mark Carroll</div>
   </div>
 
   <div class="log-wrap">
 
     <div class="log-header">
       <div class="project-tag">ATU &nbsp;·&nbsp; C++ Project &nbsp;·&nbsp; 2026</div>
-      <div class="project-title"># C-Project</div>
+      <div class="project-title"># C++-Project</div>
       <p class="project-sub">
         This will serve as a development log and report for the C++ A* pathfinding project.
         The goal is to implement an A* algorithm to find the shortest route through a randomly generated maze.
@@ -237,12 +237,10 @@
           <p>Working on the test functions. A single <code>runAllTests()</code> will run the tests. I didn't want to create a new grid for every test, so I made a default constructor. I just pass two values for an x and y axis. Making the default constructor shows that I have learned from the module and can implement my learning into my project.</p>
           <p>Started on the final grid print. I've abandoned the overloaded <code>=</code> operator. It didn't end up working, as I would have had to convert the grid to const char. I instead chose to print based off of the value, # for 0, * for 1. Then I replace the values of the path taken, with characters coresponding with the direction of the path.</p>
 
-          <p>I'm having an error with, "Expression: vector subscript out of range". I believe there is an error with validation. I'm going to work with AI to try and diagnose the issue.</p>
+          <p>I'm having an error with, "Expression: vector subscript out of range". I believe there is an error with the validation function. Currently working with AI to try and diagnose the issue.</p>
           
-          <p>Turns out the issue was alot simpler than I realised. I moved the grid initialisation to within the A* algorithm. I didn't move the grid creation into it though. That was the only real issue. I did readdress the validation to make sure it was within bounds</p>
-
-          <p>I have the main file initialising the destination and starting point.</p>
-
+          <p>Turns out the issue was alot simpler than I realised. When the grid initialisation to within the A* algorithm, I didn't move the grid creation into it though. That was the only real issue. I did readdress the validation to make sure it was within bounds anyways.</p>
+          
           <div class="img-block">
             <img src="Screenshot 2026-03-17 155808.png" alt="Main file initialising destination and starting point" width="185" height="229"/>
             <div class="img-caption">// main.cpp — destination + start initialisation</div>
@@ -268,6 +266,24 @@
             <img src="Screenshot 2026-03-17 155347.png" alt="Colour-coded console output" width="377" height="445"/>
             <div class="img-caption">// console output — colour-coded walls, path, and open cells</div>
           </div>
+        </div>
+      </div>
+
+      
+      <div class="entry">
+        <div class="entry-date">&gt; 18/03/2026</div>
+        <div class="entry-body">
+          <p>I fixed the testing, as the test function for testing destination wasn't working. This means I have tests for validation, checking if the cell is a 1 or 0, and if the cell is the destination. I'm going to verify with Michelle that this is sufficient testing. I've got good tests. I'm using small unit tests which is better for catching bugs, as running the whole thing provides no granularity.</p>
+          <p>Met with Michelle today. She recommended focusing on testing for the algorithm, and keeping the overloaded operator in the codebase even if unused — it demonstrates initiative and understanding of the course material.</p>
+        </div>
+      </div>
+
+     <!-- ── Reports ── -->
+      <div class="entry">
+        <div class="entry-date">Report</div>
+        <div class="entry-body">
+          <p></p>
+          <p></p>
         </div>
       </div>
 
