@@ -248,10 +248,6 @@
           
           <p>Turns out the issue was alot simpler than I realised. When the grid initialisation to within the A* algorithm, I didn't move the grid creation into it though. That was the only real issue. I did readdress the validation to make sure it was within bounds anyways.</p>
           
-          <div class="img-block">
-            <img src="Screenshot 2026-03-17 155808.png" alt="Main file initialising destination and starting point" width="185" height="229"/>
-            <div class="img-caption">// main.cpp — destination + start initialisation</div>
-          </div>
         </div>
       </div>
       
@@ -285,6 +281,15 @@
 
           <div class="img-block">
             <img src="Screenshot 2026-03-17 155448.png" alt="Finished grid with path overlaid" width="359" height="402"/>
+          </div>
+
+          <p>For the testing, I split it off into it's own file. It tests the validation, destination, and unblocked functions, making sure that they catch when inputs are correct and incorrect. I have one function that calls all of them, returning a bool to say if it has passed or failed.</p>
+
+          <p>The main file has been kept intentionally small. There, I have the declarations for the source, and the destination cell. I had to declare the size of the grid in the <code>"grid.h"</code> file, as they had to be <code>constexpr</code> so that they could be used in <code>cellDetails</code> and the <code>GRID</code> class.</p>
+
+          <div class="img-block">
+            <img src="Screenshot 2026-03-17 155808.png" alt="Main file initialising destination and starting point" width="185" height="229"/>
+            <div class="img-caption">// main.cpp — destination + start initialisation</div>
           </div>
           
           <p>In relation to issues that I currently have, and things that could be to make the project, there are a couple things. Within the A* function, I could've made a function to check the surrounding cells, instead of having it check each cell individually. This would reduce the stack size of the function, helping it run faster. I would also have liked to done more comprehensive unit tests. Testing the A* algorithm more, testing the calculations would have given me a smaller margin of error.</p>
